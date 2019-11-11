@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Project0</string>
+    <string name="title_activity_maps">ArtomDProject0</string>
+
+    <string name="about">ABOUT</string>
+    <string name="about_desc_1">This app was created by Artom Didinchuk.</string>
+    <string name="about_desc_2">This App can store locations that you have previously visted or custom locations anywhere in the world.</string>
+    <string name="about_desc_3">To store your current location press the \"SAVE CURRENT LOCATION\" button on the bottom left of the screen. You can enter a label and descrption for the spot (Both are optional but if both are left blank it might be hard to tell locations apart if you add multiple.)</string>
+    <string name="about_desc_4">To store a custom location press the \"SAVE CUSTOM LOCATION\" button on the bottom right of the screen. You can enter a label and descrption for the spot like before but also specify latitude and longitude coordinates (It will default to whatever the map is currently centered on.)</string>
+    <string name="about_desc_5">Once a location is saved it will show up at the bottom in the corresponding list. You can delete saved locations by pressing their \"DELETE\" buttons. You can also press the name of the location to move the map to that location.</string>
+    <string name="back">BACK</string>
+
+    <string name="delete_location">DELETE</string>
+    <string name="location_filename">locations</string>
+    <string name="locations_been_title">Places Been</string>
+    <string name="locations_been_save">SAVE CURRENT LOCATION</string>
+    <string name="locations_want_title">Places To Go</string>
+    <string name="locations_want_save">SAVE CUSTOM LOCATION</string>
+
+    <string name="title_new_marker">New Marker</string>
+    <string name="latitiude">Lat: </string>
+    <string name="longitude">Lng: </string>
+    <string name="label">Marker Label</string>
+    <string name="snippet">Marker Description</string>
+    <string name="save">SAVE</string>
+    <string name="cancel">CANCEL</string>
+
+</resources>
