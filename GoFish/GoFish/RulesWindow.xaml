@@ -1,0 +1,61 @@
+﻿<Window x:Class="GoFish.RulesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GoFish"
+        mc:Ignorable="d"
+        Title="Rules" Height="450" Width="650" ResizeMode="NoResize">
+    <Window.Resources>
+        <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="SaddleBrown"/>
+            <Setter Property="Foreground" Value="BlanchedAlmond"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="1">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Background" Value="Peru"/>
+                    <Setter Property="Foreground" Value="BurlyWood"/>
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="Maroon"/>
+                </Trigger>
+            </Style.Triggers>
+
+        </Style>
+    </Window.Resources>
+    <ScrollViewer>
+        <Grid Background="Cornsilk">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="38"/>
+                <RowDefinition Height="45"/>
+                <RowDefinition Height="38"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="38"/>
+                <RowDefinition Height="155"/>
+                <RowDefinition Height="38"/>
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="55"/>
+            </Grid.RowDefinitions>
+            <Label Content="Objective:" Foreground="SaddleBrown" Grid.Row="0" FontSize="18" HorizontalAlignment="Left" Margin="20,2,0,2"/>
+            <TextBlock Margin="35,2,25,2" TextWrapping="Wrap" Grid.Row="1"  FontSize="14" Background="BlanchedAlmond" Foreground="SaddleBrown"  Text="The goal is to win the most books. Books are made when a player has all four cards of the same rank."/>
+            <Label Content="Set Up:" Foreground="SaddleBrown" Grid.Row="2" FontSize="18" HorizontalAlignment="Left" Margin="20,2,0,2"/>
+            <TextBlock Margin="35,2,25,2" TextWrapping="Wrap" Grid.Row="3" Text="A game is played with a deck of 52 cards, 13 of each suit. At the start each player gets a hand of 7(3 or less players) or 5(4 or more players) cards from the deck and the rest are set aside and called the 'sea'. " FontSize="14" Background="BlanchedAlmond" Foreground="SaddleBrown"/>
+            <Label Content="Game Play:" Foreground="SaddleBrown" Grid.Row="4" FontSize="18" HorizontalAlignment="Left" Margin="20,2,0,2"/>
+            <TextBlock Margin="35,2,25,2" TextWrapping="Wrap" Grid.Row="5"  FontSize="14" Background="BlanchedAlmond" Foreground="SaddleBrown"  Text="The order is randomly determined. The player who's turn it is asks another player for a cards of a rank that they already have. If the other player has cards of that rank they hand them all over to the player that asked for them. If they other player has no cards of that rank then the calling player draws a card from the sea. If that card rank matches the card rank they requested they get to go again. If after they gain a card or cards they have four of one rank then those cards are removed and the player scores one book. If at any point a player has no cards remaining in hand then they draw 5(or 7 as stated above) more cards if they are able. Once the sea has run out of cards no more cards can be drawn."/>
+            <Label Content="Game End:" Foreground="SaddleBrown" Grid.Row="6" FontSize="18" HorizontalAlignment="Left" Margin="20,2,0,2"/>
+            <TextBlock Margin="35,2,25,2" TextWrapping="Wrap" Grid.Row="7"  FontSize="14" Background="BlanchedAlmond" Foreground="SaddleBrown"  Text="Once a player has no more cards and none remain in the sea for them to draw from they can no longer make any moves. Once no player has any cards in hand the game is over. The winner is the player who has completed the most books. Ties are allowed if the number of books for multiple people is the same."/>
+
+
+            <Button Style="{StaticResource ButtonStyle}" Grid.Row="8" Height="35" Width="120" Margin="10,10,10,10" Content="OK" FontSize="20" Click="quit"/>
+
+        </Grid>
+    </ScrollViewer>
+</Window>

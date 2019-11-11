@@ -1,0 +1,87 @@
+﻿<Window x:Class="LiteBrite.View.NewBoardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LiteBrite.View"
+        xmlns:utils="clr-namespace:LiteBrite.Utils"
+        xmlns:prop="clr-namespace:LiteBrite.Properties"
+        mc:Ignorable="d"
+        Title="{x:Static prop:Resources.newBoardTitleString}" Height="500" Width="500">
+    <Window.Resources>
+        <utils:GenerateOpacityConverter  x:Key="GenerateOpacity_Converter"/>
+    </Window.Resources>
+    <Grid>
+        <StackPanel Width="380" HorizontalAlignment="Center" Orientation="Vertical">
+            <StackPanel Width="250" Orientation="Horizontal">
+                <Label FontSize="20" Margin="10" Foreground="DarkSlateBlue" Content="{x:Static prop:Resources.maxMosaicSizeString}" />
+                <Rectangle Fill="Red" Width="{Binding ElementName=MosaicSizeSelect, Path=Value}" Height="{Binding ElementName=MosaicSizeSelect, Path=Value}" Margin="0,4,5,2"/>
+            </StackPanel>
+            <Slider Name="MosaicSizeSelect" Foreground="DarkSlateGray" IsSnapToTickEnabled="True" Margin="100,5,100,5" Value="{Binding mosaicSize}" Minimum="8" Maximum="20" TickPlacement="BottomRight" TickFrequency="4" />
+            <StackPanel Width="250" Orientation="Horizontal">
+                <Label FontSize="20" Margin="10" Foreground="DarkSlateBlue" Content="{x:Static prop:Resources.boardWidthString}" />
+                <TextBox MaxLength="2" Text="{Binding width}" Height="30" Width="40" PreviewTextInput="NumberValidationTextBox" />
+
+            </StackPanel>
+            <StackPanel Width="250" Orientation="Horizontal">
+                <Label FontSize="20" Margin="10" Foreground="DarkSlateBlue" Content="{x:Static prop:Resources.boardHeightString}" />
+                <TextBox MaxLength="2" Text="{Binding height}" Height="30" Width="40" PreviewTextInput="NumberValidationTextBox" />
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical">
+                <GroupBox>
+                    <StackPanel>
+                        <CheckBox IsChecked="{Binding generate}" Margin="30,10,10,10" Content="{x:Static prop:Resources.generateTilesString}"/>
+                        <GroupBox Header="{x:Static prop:Resources.generationDetailsString}">
+                            <StackPanel Opacity="{Binding generate, Converter={StaticResource GenerateOpacity_Converter}}" IsEnabled="{Binding generate}" Orientation="Horizontal">
+                                <GroupBox Header="{x:Static prop:Resources.colorString}">
+                                    <StackPanel Orientation="Vertical">
+                                        <RadioButton IsChecked="{Binding randomColor}" GroupName="color" Content="{x:Static prop:Resources.randomString}"/>
+                                        <RadioButton IsChecked="{Binding notRandomColor}" GroupName="color" Content="{x:Static prop:Resources.optionColorString}"/>
+                                        <ComboBox IsEnabled="{Binding notRandomColor}" SelectedIndex="0" ItemsSource="{Binding Path=Colors}" Height="30" VerticalAlignment="Bottom" Margin="10" SelectedItem="{Binding selectedColor}" Width="150">
+                                            <ComboBox.ItemTemplate>
+                                                <DataTemplate>
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <Rectangle Fill="{Binding Color}" Width="16" Height="16" Margin="0,2,5,2"/>
+                                                        <TextBlock Margin="2,4,5,4" Text="{Binding ColorName}" />
+                                                    </StackPanel>
+                                                </DataTemplate>
+                                            </ComboBox.ItemTemplate>
+                                        </ComboBox>
+                                    </StackPanel>
+                                </GroupBox>
+                                <GroupBox Header="Shape">
+
+                                    <StackPanel Orientation="Vertical">
+                                        <RadioButton IsChecked="{Binding randomShape}" GroupName="shape" Content="{x:Static prop:Resources.randomString}"/>
+                                        <RadioButton IsChecked="{Binding circle}" GroupName="shape" Content="{x:Static prop:Resources.circleString}"/>
+                                        <RadioButton IsChecked="{Binding square}" GroupName="shape" Content="{x:Static prop:Resources.squareString}"/>
+                                    </StackPanel>
+
+                                </GroupBox>
+                                <GroupBox Header="Size">
+
+                                    <StackPanel Orientation="Vertical">
+                                        <RadioButton IsChecked="{Binding randomSize}" GroupName="Size" Content="{x:Static prop:Resources.optionRandomString}"/>
+                                        <RadioButton IsChecked="{Binding big}" GroupName="Size" Content="{x:Static prop:Resources.optionSizeLargeString}"/>
+                                        <RadioButton IsChecked="{Binding medium}" GroupName="Size" Content="{x:Static prop:Resources.optionSizeMediumString}"/>
+                                        <RadioButton IsChecked="{Binding small}" GroupName="Size" Content="{x:Static prop:Resources.optionSizeSmallString}"/>
+                                        <RadioButton IsChecked="{Binding tiny}" GroupName="Size" Content="{x:Static prop:Resources.optionSizeTinyString}"/>
+
+                                    </StackPanel>
+
+                                </GroupBox>
+                            </StackPanel>
+                        </GroupBox>
+                    </StackPanel>
+                </GroupBox>
+            </StackPanel>
+            <StackPanel Width="220" Orientation="Horizontal">
+                <Button Click="newBoard" Margin="25" FontSize="20" Content="{x:Static prop:Resources.createString}"/>
+
+                <Button Click="closeWindow" Margin="25" FontSize="20"  Content="{x:Static prop:Resources.cancelString}"/>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Window>

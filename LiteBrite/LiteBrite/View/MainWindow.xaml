@@ -1,0 +1,162 @@
+﻿<Window x:Class="LiteBrite.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LiteBrite.ViewModel"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:utils="clr-namespace:LiteBrite.Utils"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:prop="clr-namespace:LiteBrite.Properties"
+        mc:Ignorable="d"
+        Title="{x:Static prop:Resources.titleString}" Height="600" Width="800">
+
+    <Window.Resources>        
+        <utils:LightConverter  x:Key="Light_Converter"/>
+        <BooleanToVisibilityConverter x:Key="BoolToVis" />
+        <DataTemplate x:Key="polygonTemplate">
+
+            <Grid Background="Transparent" DragEnter="PolygonDestination_DragEnter" 
+                 Drop="PolygonDestination_Drop" AllowDrop="True" PreviewMouseLeftButtonDown="PolygonSource_PreviewMouseLeftButtonDown" 
+                 MouseMove="PolygonSource_MouseMove">
+                
+                <Ellipse Margin="1,1,0,0" Fill="{Binding Color.Color}" Height="{Binding Size}" Width="{Binding Size}" Visibility="{Binding Path=IsCircle, Converter={StaticResource BoolToVis}}"></Ellipse>
+                <Polygon Margin="1,1,0,0" Fill="{Binding Color.Color}" Stretch="Uniform" Points="0,0 0,1 1,1 1,0" Height="{Binding Size}" Width="{Binding Size}" Visibility="{Binding Path=IsPolygon, Converter={StaticResource BoolToVis}}"></Polygon>
+                <Grid>
+                    <Border  HorizontalAlignment="Left" VerticalAlignment="Top"  BorderBrush="Black" Opacity="0.2" BorderThickness="1">
+                        <Grid  HorizontalAlignment="Left" VerticalAlignment="Top" />
+                    </Border>
+                    <Border  HorizontalAlignment="Left" VerticalAlignment="Top"  BorderBrush="White" Opacity="0.2" BorderThickness="1">
+                        <Grid  HorizontalAlignment="Left" VerticalAlignment="Top" />
+                    </Border>
+                </Grid>
+            </Grid>
+
+
+        </DataTemplate>
+
+        <DataTemplate x:Key="polygonSource">
+            <Grid Background="Transparent" Width="30" Height="30" Name="PolygonSource"  DragEnter="PolygonDestination_DragEnter"  
+                 Drop="PolygonDestination_Drop" AllowDrop="True" PreviewMouseLeftButtonDown="PolygonSource_PreviewMouseLeftButtonDown" 
+                 MouseMove="PolygonSource_MouseMove">
+                <Ellipse Width="{Binding Size}" Height="{Binding Size}" Fill="{Binding Color.Color}" Visibility="{Binding Path=IsCircle, Converter={StaticResource BoolToVis}}"></Ellipse>
+                <Polygon Fill="{Binding Color.Color}" Stretch="Uniform" Points="0,0 0,1 1,1 1,0" Width="{Binding Size}" Height="{Binding Size}" Visibility="{Binding Path=IsPolygon, Converter={StaticResource BoolToVis}}"></Polygon>
+            </Grid>
+        </DataTemplate>
+
+    </Window.Resources>
+    <Grid Name="MainGrid" Background="WhiteSmoke" MouseLeftButtonUp="MouseIsUp">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0">
+            <MenuItem Header="{x:Static prop:Resources.fileString}">
+                <MenuItem Header="{x:Static prop:Resources.openString}" Command="{Binding OpenFileCommand}"/>
+                <MenuItem Header="{x:Static prop:Resources.saveString}" Command="{Binding SaveFileCommand}"/>
+                <Separator />
+                <MenuItem Header="_Exit"  Command="{Binding CloseAppCommand}" />
+            </MenuItem>
+            <MenuItem Header="{x:Static prop:Resources.gameString}">
+                <MenuItem Header="{x:Static prop:Resources.newString}" Command="{Binding NewGridCommand}"/>
+                <MenuItem Header="{x:Static prop:Resources.randomString}" Command="{Binding NewRandomGridCommand}"/>
+            </MenuItem>
+
+            <MenuItem Header="Help">
+                <MenuItem Header="{x:Static prop:Resources.instructionString}" Command="{Binding ShowHelpCommand}" />
+                <MenuItem Header="{x:Static prop:Resources.aboutString}" Command="{Binding ShowAboutCommand}" />
+            </MenuItem>
+        </Menu>
+        <Grid Grid.Row="1">
+            <DockPanel  LastChildFill="True">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <Grid Width="200" DockPanel.Dock="Left" >
+                        <StackPanel Panel.ZIndex="10" Orientation="Vertical">
+
+                            <GroupBox Header="{x:Static prop:Resources.backgroundString}">
+                            <StackPanel Orientation="Horizontal">
+                                    <ComboBox Name="BackgroundColor" ItemsSource="{Binding backgroundColors}" SelectedIndex="0" Background="{Binding GridProp.BackgroundColor}" SelectedItem="{Binding GridProp.BackgroundColor, Mode=TwoWay}" Height="25" VerticalAlignment="Bottom" Margin="10" Width="105">
+                                        <ComboBox.Resources>
+                                            <sys:Double x:Key="{x:Static SystemParameters.VerticalScrollBarWidthKey}">0</sys:Double>
+                                        </ComboBox.Resources>
+                                        <ComboBox.ItemTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Margin="-5,-2,-5,-2" Width="105" Background="{Binding Color}">
+                                                    <TextBlock Margin="2,4,5,4" Foreground="{Binding FontColor}" Text="{Binding ColorName}" />
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </ComboBox.ItemTemplate>                                        
+                                </ComboBox>
+                                <ToggleButton Padding="3" Margin="5,10,5,10" IsChecked="{Binding GridProp.Light}" >
+                                    <ToggleButton.Style>
+                                        <Style TargetType="{x:Type ToggleButton}">                                            
+                                            <Style.Triggers>
+                                                <Trigger Property="IsChecked" Value="True">
+                                                    <Setter Property="Background" Value="Gray"/>
+                                                    <Setter Property="Foreground" Value="White"/>
+                                                        <Setter Property="Content" Value="{x:Static prop:Resources.LightOffString}"/>
+                                                </Trigger>
+                                                <Trigger Property="IsChecked"  Value="False">
+                                                    <Setter Property="Background" Value="White"/>
+                                                    <Setter Property="Foreground" Value="Gray"/>
+                                                        <Setter Property="Content" Value="{x:Static prop:Resources.lightOnString}"/>
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </ToggleButton.Style>
+                                </ToggleButton>
+                            </StackPanel>
+                        </GroupBox>
+
+                            <GroupBox Height="50" Header="{x:Static prop:Resources.shapeString}">
+                            <StackPanel Orientation="Horizontal">
+                                    <RadioButton Margin="10,6,10,6" GroupName="shape" Content="{x:Static prop:Resources.circleString}" IsChecked="{Binding selectedMosaic.IsCircle}"/>
+                                    <RadioButton Margin="10,6,10,6" GroupName="shape" Content="{x:Static prop:Resources.squareString}" IsChecked="{Binding selectedMosaic.IsPolygon}" />
+                            </StackPanel>
+                        </GroupBox>
+                            <GroupBox Header="{x:Static prop:Resources.colorString}">
+                                <ComboBox Name="mosaicColorSelect" ItemsSource="{Binding Path=Colors}" SelectedIndex="1" Height="30" VerticalAlignment="Bottom" Margin="10" SelectedItem="{Binding selectedMosaic.Color}" Width="150">
+                                <ComboBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Rectangle Fill="{Binding Color}" Width="16" Height="16" Margin="0,2,5,2"/>                                            
+                                            <TextBlock Margin="2,4,5,4" Text="{Binding ColorName}" />
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ComboBox.ItemTemplate>                                
+                            </ComboBox>
+
+                        </GroupBox>
+                        <Grid Name="SelectionGrid" VerticalAlignment="Top" Margin="10" Width="30" Height="30" Background="LightGray" >
+                            <ContentControl  Content="{Binding selectedMosaic}" ContentTemplate="{StaticResource polygonSource}" />
+                        </Grid>
+                            <GroupBox Header="{x:Static prop:Resources.sizeString}">
+                            <Slider Foreground="DarkSlateGray" IsSnapToTickEnabled="True" Margin="20,5,20,5" Value="{Binding selectedMosaic.Size}" Minimum="{Binding GridProp.MinMosaicSize}" Maximum="{Binding GridProp.GridSize}" TickPlacement="BottomRight" TickFrequency="2" />
+                        </GroupBox>
+                            <GroupBox Margin="2" Padding="5,10,5,5" Header="{x:Static prop:Resources.dragSettingsString}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                    <RadioButton IsChecked="{Binding gridSettingMove}" GroupName="gridSettings" Grid.Column="0" Content="{x:Static prop:Resources.moveString}"/>
+                                    <RadioButton IsChecked="{Binding gridSettingCopy}" GroupName="gridSettings" Grid.Column="1" Content="{x:Static prop:Resources.copyString}"/>
+                                    <RadioButton IsChecked="{Binding gridSettingSwap}" GroupName="gridSettings" Grid.Column="2" Content="{x:Static prop:Resources.swapString}"/>
+                            </Grid>
+                        </GroupBox>
+                    </StackPanel>
+                        <Grid Panel.ZIndex="1" Drop="PolygonClear_Drop" AllowDrop="True" Background="Transparent" ></Grid>
+                    </Grid>
+                </ScrollViewer>
+                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                    <Grid>
+                        <WrapPanel Opacity="{Binding GridProp.Light, Converter={StaticResource Light_Converter}}" Panel.ZIndex="10" Background="{Binding GridProp.BackgroundColor.Color}" Width="{Binding GridProp.GridWidth}" Height="{Binding GridProp.GridHeight}" Name="wrapPanel"/>
+                        <Grid Panel.ZIndex="2" Background="{Binding GridProp.BackgroundColor.Color}" Width="{Binding GridProp.GridWidth}" Height="{Binding GridProp.GridHeight}"/>
+                        <Grid Panel.ZIndex="1" Background="Transparent" Drop="PolygonClear_Drop" AllowDrop="True" ></Grid>
+                    </Grid>
+                </ScrollViewer>
+            </DockPanel>
+        </Grid>
+    </Grid>
+</Window>
