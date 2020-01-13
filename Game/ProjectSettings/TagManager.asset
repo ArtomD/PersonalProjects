@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Projectile
+  - Barrier
+  - Asteroid
+  - CrystalAsteroid
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Asteroids
+  - Ship
+  - Projectiles
+  - Invisible-UI
+  - ReflectedProjectiles
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2928561871
+    locked: 0
+  - name: Asteroids
+    uniqueID: 3044302001
+    locked: 0
+  - name: Projectile
+    uniqueID: 3595439851
+    locked: 0
+  - name: Ship
+    uniqueID: 3918486521
+    locked: 0
+  - name: Pickups
+    uniqueID: 1853558889
+    locked: 0

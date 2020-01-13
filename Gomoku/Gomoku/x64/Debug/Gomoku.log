@@ -1,0 +1,16 @@
+﻿  stdafx.cpp
+  GameController.cpp
+  GameModel.cpp
+  Gomoku.cpp
+  IViewObserver.cpp
+  MainController.cpp
+  MovesController.cpp
+C:\GitProjects\PersonalProjects\Gomoku\Gomoku\MovesController.cpp(36,39): warning C4267:  '=': conversion from 'size_t' to 'int', possible loss of data
+C:\GitProjects\PersonalProjects\Gomoku\Gomoku\MovesController.cpp(45,8): warning C4101:  'charsWritten': unreferenced local variable
+  NameController.cpp
+C:\GitProjects\PersonalProjects\Gomoku\Gomoku\MovesController.cpp(73,36): warning C4267:  '=': conversion from 'size_t' to 'int', possible loss of data
+  ScoreController.cpp
+C:\GitProjects\PersonalProjects\Gomoku\Gomoku\NameController.cpp(44,8): warning C4101:  'charsWritten': unreferenced local variable
+  Generating Code...
+C:\GitProjects\PersonalProjects\Gomoku\Gomoku\ScoreController.cpp(37,38): warning C4267:  'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Gomoku.vcxproj -> C:\GitProjects\PersonalProjects\Gomoku\x64\Debug\Gomoku.exe

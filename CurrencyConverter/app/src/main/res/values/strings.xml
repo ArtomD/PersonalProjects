@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Currency Converter</string>
+    <string name="cameraButtonTurnOn">Use Camera</string>
+    <string name="cameraButtonTurnOff">Close Camera</string>
+    <string name="API_KEY">31317455d2572fb88dbb81f61e7fe287</string>
+
+</resources>

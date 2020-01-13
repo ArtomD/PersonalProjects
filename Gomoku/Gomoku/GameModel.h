@@ -3,6 +3,7 @@
 #include <vector>
 #include <Windows.h>
 #include "IViewObserver.h"
+#include <string>
 using namespace std;
 
 
@@ -38,7 +39,7 @@ public:
 	void processGameState();
 	void attach(IViewObserver*obs);
 	void refeshViews(int view);
-	void OutputString(WORD x, WORD y, std::string const& s, WORD attributes);
+	void OutputString(WORD x, WORD y, string const& s, WORD attributes);
 	~GameModel();
 };
 

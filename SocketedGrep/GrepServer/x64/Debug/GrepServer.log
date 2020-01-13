@@ -1,0 +1,9 @@
+﻿  ConsoleUtils.cpp
+  Grep.cpp
+  Parser.cpp
+  SharedVars.cpp
+  StringUtils.cpp
+  ThreadUtils.cpp
+  TimeUtils.cpp
+  Generating Code...
+  GrepServer.vcxproj -> C:\School\Semester6\INFO5104\Project 3\SocketedGrep\x64\Debug\GrepServer.exe

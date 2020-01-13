@@ -1,0 +1,18 @@
+{"countries":[
+  {"name":"Canada", "country_code":"CA", "currency": "Canadian Dollar", "currency_code": "CAD"},
+  {"name":"Myanmar", "country_code":"MM", "currency": "Burmese Kyat", "currency_code": "MMK"},
+  {"name":"Cambodia", "country_code":"KH", "currency": "Cambodian Riel", "currency_code": "KHR"},
+  {"name":"United States", "country_code":"US", "currency": "United States Dollar", "currency_code": "USD"},
+  {"name":"United Kingdom", "country_code":"GB", "currency": "Pound Sterling", "currency_code": "GBP"},
+  {"name":"Europe", "country_code":"EU", "currency": "Euro", "currency_code": "EUR"},
+  {"name":"China", "country_code":"CN", "currency": "Chinese Yuan", "currency_code": "CNY"},
+  {"name":"Japan", "country_code":"JP", "currency": "Japanese Yen", "currency_code": "JPY"},
+  {"name":"Russia", "country_code":"RU", "currency": "Russian Ruble", "currency_code": "RUB"},
+  {"name":"Philippines", "country_code":"PH", "currency": "Philippines Peso", "currency_code": "PHP"},
+  {"name":"India", "country_code":"IN", "currency": "Indian Rupee", "currency_code": "INR"},
+  {"name":"Brazil", "country_code":"BR", "currency": "Brazilian Real", "currency_code": "BRL"},
+  {"name":"Libya", "country_code":"LY", "currency": "Libyan Dinar", "currency_code": "LYD"},
+  {"name":"Gibraltar", "country_code":"GI", "currency": "Gibraltar pound", "currency_code": "GIP"},
+  {"name":"Georgia", "country_code":"GE", "currency": "Georgian Lari", "currency_code": "GEL"},
+  {"name":"Macau", "country_code":"MO", "currency": "Macanese pataca", "currency_code": "MOP"}
+]}

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "910953788079",
+    "firebase_url": "https://currencyrecognition-e510d.firebaseio.com",
+    "project_id": "currencyrecognition-e510d",
+    "storage_bucket": "currencyrecognition-e510d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:910953788079:android:e44a928c01843f912b5a5a",
+        "android_client_info": {
+          "package_name": "com.example.adidinchuk.currencyrecongition"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "910953788079-l61ju22keeqfepdjrifckte1eemtaaap.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2tKF4q5fQ7YLYiaBRnWOx1IVrI81oflI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "910953788079-l61ju22keeqfepdjrifckte1eemtaaap.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

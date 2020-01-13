@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#FAFAFA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <Spinner
+                        android:id="@+id/CurrentCountry"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </Spinner>
+
+                    <TextView
+                        android:id="@+id/currentCountryName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:textColor="#2f2f2f"
+                        android:autoSizeMaxTextSize="30dp"
+                        android:autoSizeMinTextSize="16dp"
+                        android:autoSizeStepGranularity="2dp"
+                        android:autoSizeTextType="uniform" />
+
+                    <TextView
+                        android:id="@+id/currentCountryCurrency"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:textColor="#3f3f3f"
+                        android:autoSizeMaxTextSize="24dp"
+                        android:autoSizeMinTextSize="14dp"
+                        android:autoSizeStepGranularity="2dp"
+                        android:autoSizeTextType="uniform" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <Spinner
+                        android:id="@+id/TargetCountry"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </Spinner>
+
+                    <TextView
+                        android:id="@+id/targetCountryName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:textColor="#2f2f2f"
+                        android:autoSizeMaxTextSize="30dp"
+                        android:autoSizeMinTextSize="16dp"
+                        android:autoSizeStepGranularity="2dp"
+                        android:autoSizeTextType="uniform" />
+
+                    <TextView
+                        android:id="@+id/targetCountryCurrency"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:textColor="#3f3f3f"
+                        android:autoSizeMaxTextSize="24dp"
+                        android:autoSizeMinTextSize="14dp"
+                        android:autoSizeStepGranularity="2dp"
+                        android:autoSizeTextType="uniform" />
+
+                    <Button
+                        android:id="@+id/showCameraButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="toggleCameraFragment"
+                        android:textColor="#FFFFFF"
+                        android:paddingRight="20dp"
+                        android:paddingLeft="20dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="14dp"
+                        android:background="@drawable/round_button"
+                        android:text="@string/cameraButtonTurnOn" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/currencyRatio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:textAlignment="center"
+                android:textSize="28dp"
+                android:ellipsize="end"
+                android:textColor="#1f1f1f"
+                android:maxLines="1"/>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <FrameLayout
+                    android:id="@+id/cameraFragmentView"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1.4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </FrameLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

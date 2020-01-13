@@ -1,0 +1,5 @@
+﻿  DisplayController.cpp
+C:\School\Semester6\INFO5104\Project 3\SocketedGrep\GrepClient\DisplayController.cpp(162,38): warning C4267:  '=': conversion from 'size_t' to 'int', possible loss of data
+C:\School\Semester6\INFO5104\Project 3\SocketedGrep\GrepClient\DisplayController.cpp(191,49): warning C4267:  '=': conversion from 'size_t' to 'int', possible loss of data
+C:\School\Semester6\INFO5104\Project 3\SocketedGrep\GrepClient\DisplayController.cpp(383,68): warning C4838:  conversion from 'WORD' to 'SHORT' requires a narrowing conversion
+  GrepClient.vcxproj -> C:\School\Semester6\INFO5104\Project 3\SocketedGrep\x64\Debug\GrepClient.exe
