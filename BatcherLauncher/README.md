@@ -5,6 +5,7 @@ This is a project designed to launch multiple applications asynchronously based 
 ## About
 
 Language: C++.
+
 This was a class project to parse a text file and launch the applications specified in it in groups. Each application in a group would be launched asynchronously and when all are completed the next group would be launched. The applications to launch would be specified in a text file which must be specified as the argument used when launching the main application.
 
 The text file used to launch the applications has each application in a newline delimited format with specific instruction for that application launch in comma delimited format. 
