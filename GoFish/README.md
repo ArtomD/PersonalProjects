@@ -6,7 +6,7 @@ An online game of GoFish for multiple players with a server being able to host m
 
 Language: C#.
 
-This application consisted of a server, client and a shared library that both use, it used System.ServiceModel to preform two way communication between the server and client. Each client has a user interface to log in, create, join and leave game lobbies as well as start them. 2-6 clients can join the same game.
+This application consisted of a server, a WPF client and a shared library that both use, it used System.ServiceModel to preform two way communication between the server and client. Each client has a user interface to log in, create, join and leave game lobbies as well as start them. 2-6 clients can join the same game.
 
 ## Running
 
