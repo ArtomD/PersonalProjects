@@ -10,7 +10,7 @@ This is a compilation of projects completed by me during my CPA course in Fansha
 
 Language: Java
 
-Android appllication that uses the Google Maps API to track and store user locations.
+Android application that uses the Google Maps API to track and store user locations.
 
 ### BatcherLauncher
 
