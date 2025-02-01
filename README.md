@@ -1,6 +1,48 @@
+# Colaboration Projects
+
+Below is an external list of projects I collaborated on after graduation
+
+## Project List
+
+### PatchDroid
+
+[Repo link](https://github.com/ArtomD/Game-Off-2021-11)
+[Demo link](https://crankky.itch.io/pathdroid)
+
+Language C# in Unity
+
+2D Platformer created for the [Game Off 2021 game jam](https://itch.io/jam/game-off-2021), with an overal place of 10th. (1 month of development)
+
+### Sandmageddon
+
+[Repo link](https://github.com/corynorris/brackeys-2021.2)
+[Demo link](https://crankky.itch.io/sandmageddon)
+
+Language C# in Unity
+
+2D Top down survival crafter created for [Brackeys Game Jam 2021.2](https://itch.io/jam/brackeys-6), with an overal place of 512th. (1 week of development)
+
+### We-Roll
+
+[Repo link](https://github.com/ArtomD/GameJam2021)
+[Demo link](https://crankky.itch.io/we-roll)
+
+Language C# in Unity
+
+2D platformer with multiplayer elements created for [GMTK Game Jam 2021](https://itch.io/jam/gmtk-2021), with an overal place of 364th. (2 days of development)
+
+### Goona
+
+[Repo link](https://github.com/corynorris/gameoff-2020)
+[Demo link](https://corynorris.github.io/gameoff-2020/)
+
+Language C# in Unity
+
+2D real time puzzle game created for [Game Off 2020](https://itch.io/jam/game-off-2020), with an overal place of 36th. (1 month of development)
+
 # PersonalProjects
 
-This is a compilation of projects completed by me during my CPA course in Fanshawe.
+The following is a compilation of projects completed by me during my CPA course in Fanshawe.
 
 ## Project List
 
