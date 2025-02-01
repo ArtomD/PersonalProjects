@@ -6,8 +6,8 @@ Below is an external list of projects I collaborated on after graduation
 
 ### PatchDroid
 
-[Repo link](https://github.com/ArtomD/Game-Off-2021-11)
-[Demo link](https://crankky.itch.io/pathdroid)
+[Repo link](https://github.com/ArtomD/Game-Off-2021-11)  
+[Demo link](https://crankky.itch.io/pathdroid)  
 
 Language C# in Unity
 
@@ -15,8 +15,8 @@ Language C# in Unity
 
 ### Sandmageddon
 
-[Repo link](https://github.com/corynorris/brackeys-2021.2)
-[Demo link](https://crankky.itch.io/sandmageddon)
+[Repo link](https://github.com/corynorris/brackeys-2021.2)  
+[Demo link](https://crankky.itch.io/sandmageddon)  
 
 Language C# in Unity
 
@@ -24,8 +24,8 @@ Language C# in Unity
 
 ### We-Roll
 
-[Repo link](https://github.com/ArtomD/GameJam2021)
-[Demo link](https://crankky.itch.io/we-roll)
+[Repo link](https://github.com/ArtomD/GameJam2021)  
+[Demo link](https://crankky.itch.io/we-roll)  
 
 Language C# in Unity
 
@@ -33,8 +33,8 @@ Language C# in Unity
 
 ### Goona
 
-[Repo link](https://github.com/corynorris/gameoff-2020)
-[Demo link](https://corynorris.github.io/gameoff-2020/)
+[Repo link](https://github.com/corynorris/gameoff-2020)  
+[Demo link](https://corynorris.github.io/gameoff-2020/)  
 
 Language C# in Unity
 
