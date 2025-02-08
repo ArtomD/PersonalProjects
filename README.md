@@ -8,7 +8,7 @@ Below is an external list of projects I collaborated on after graduation
 
 [Repo link](https://github.com/ArtomD/Game-Off-2021-11)  
 [Demo link](https://crankky.itch.io/pathdroid)  
-<img src="Images/PatchDroid.png" width="300"/>
+<img src="Images/PatchDroid.png" width="350"/>
 
 Language C# in Unity
 
@@ -18,7 +18,7 @@ Language C# in Unity
 
 [Repo link](https://github.com/corynorris/brackeys-2021.2)  
 [Demo link](https://crankky.itch.io/sandmageddon)  
-<img src="Images/Sandmageddon" width="300"/>
+<img src="Images/Sandmageddon.png" width="350"/>
 Language C# in Unity
 
 2D Top down survival crafter created for [Brackeys Game Jam 2021.2](https://itch.io/jam/brackeys-6), with an overal place of 512th. (1 week of development)
@@ -27,7 +27,7 @@ Language C# in Unity
 
 [Repo link](https://github.com/ArtomD/GameJam2021)  
 [Demo link](https://crankky.itch.io/we-roll)  
-<img src="Images/We-Roll" width="300"/>
+<img src="Images/We-Roll.png" width="350"/>
 
 Language C# in Unity
 
@@ -37,7 +37,7 @@ Language C# in Unity
 
 [Repo link](https://github.com/corynorris/gameoff-2020)  
 [Demo link](https://corynorris.github.io/gameoff-2020/)  
-<img src="Images/Goona" width="300"/>
+<img src="Images/Goona.png" width="350"/>
 
 Language C# in Unity
 
