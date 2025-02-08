@@ -8,7 +8,7 @@ Below is an external list of projects I collaborated on after graduation
 
 [Repo link](https://github.com/ArtomD/Game-Off-2021-11)  
 [Demo link](https://crankky.itch.io/pathdroid)  
-![PatchDroid](https://github.com/ArtomD/PersonalProjects/blob/master/Images/PatchDroid.png?raw=true)
+<img src="Images/PatchDroid.png" width="128"/>
 
 Language C# in Unity
 
