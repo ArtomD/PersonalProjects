@@ -8,6 +8,7 @@ Below is an external list of projects I collaborated on after graduation
 
 [Repo link](https://github.com/ArtomD/Game-Off-2021-11)  
 [Demo link](https://crankky.itch.io/pathdroid)  
+![PatchDroid](https://github.com/ArtomD/PersonalProjects/blob/master/Images/PatchDroid.png?raw=true)
 
 Language C# in Unity
 
@@ -17,6 +18,7 @@ Language C# in Unity
 
 [Repo link](https://github.com/corynorris/brackeys-2021.2)  
 [Demo link](https://crankky.itch.io/sandmageddon)  
+![Sandmageddon](https://github.com/ArtomD/PersonalProjects/blob/master/Images/Sandmageddon.png?raw=true)
 
 Language C# in Unity
 
@@ -26,6 +28,7 @@ Language C# in Unity
 
 [Repo link](https://github.com/ArtomD/GameJam2021)  
 [Demo link](https://crankky.itch.io/we-roll)  
+![We-Roll](https://github.com/ArtomD/PersonalProjects/blob/master/Images/We-Roll.png?raw=true)
 
 Language C# in Unity
 
@@ -35,6 +38,7 @@ Language C# in Unity
 
 [Repo link](https://github.com/corynorris/gameoff-2020)  
 [Demo link](https://corynorris.github.io/gameoff-2020/)  
+![Goona](https://github.com/ArtomD/PersonalProjects/blob/master/Images/Goona.png?raw=true)
 
 Language C# in Unity
 
@@ -45,6 +49,22 @@ Language C# in Unity
 The following is a compilation of projects completed by me during my CPA course in Fanshawe.
 
 ## Project List
+
+### Kartau
+
+[Repo link](https://github.com/ArtomD/Kartau)
+
+Language: Java
+
+Android application that uses the Google Maps API to let users share their location with select groups
+
+### Curbby-ui
+
+[Repo link](https://github.com/ArtomD/curbby-ui)
+
+Language: JavaScript
+
+Interface for Curbby, a shoppify addon that lets buisness coordinate pickup locations with customers.
 
 ### AndroidGMaps
 
