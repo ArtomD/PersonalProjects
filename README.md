@@ -1,4 +1,4 @@
-# Colaboration Projects
+# Collaboration Projects
 
 Below is an external list of projects I collaborated on after graduation
 
@@ -12,16 +12,17 @@ Below is an external list of projects I collaborated on after graduation
 
 Language C# in Unity
 
-2D Platformer created for the [Game Off 2021 game jam](https://itch.io/jam/game-off-2021), with an overal place of 10th. (1 month of development)
+2D Platformer created for the [Game Off 2021 game jam](https://itch.io/jam/game-off-2021), with an overall place of 10th. (1 month of development)
 
 ### Sandmageddon
 
 [Repo link](https://github.com/corynorris/brackeys-2021.2)  
 [Demo link](https://crankky.itch.io/sandmageddon)  
 <img src="Images/Sandmageddon.png" width="350"/>
+
 Language C# in Unity
 
-2D Top down survival crafter created for [Brackeys Game Jam 2021.2](https://itch.io/jam/brackeys-6), with an overal place of 512th. (1 week of development)
+2D Top down survival crafter created for [Brackeys Game Jam 2021.2](https://itch.io/jam/brackeys-6), with an overall place of 512th. (1 week of development)
 
 ### We-Roll
 
@@ -31,7 +32,7 @@ Language C# in Unity
 
 Language C# in Unity
 
-2D platformer with multiplayer elements created for [GMTK Game Jam 2021](https://itch.io/jam/gmtk-2021), with an overal place of 364th. (2 days of development)
+2D platformer with multiplayer elements created for [GMTK Game Jam 2021](https://itch.io/jam/gmtk-2021), with an overall place of 364th. (2 days of development)
 
 ### Goona
 
@@ -41,7 +42,7 @@ Language C# in Unity
 
 Language C# in Unity
 
-2D real time puzzle game created for [Game Off 2020](https://itch.io/jam/game-off-2020), with an overal place of 36th. (1 month of development)
+2D real time puzzle game created for [Game Off 2020](https://itch.io/jam/game-off-2020), with an overall place of 36th. (1 month of development)
 
 # PersonalProjects
 
@@ -63,7 +64,7 @@ Android application that uses the Google Maps API to let users share their locat
 
 Language: JavaScript
 
-Interface for Curbby, a shoppify addon that lets buisness coordinate pickup locations with customers.
+Interface for Curbby, a shoppify addon that lets businesses coordinate pickup locations with customers.
 
 ### AndroidGMaps
 
